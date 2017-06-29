@@ -18,7 +18,7 @@ typedef struct {
 typedef union {
 	Packet data;
 	uint8_t byte[32];
-} PacketToSend;
+} PacketInTransit;
 
 #define packetInitializer() { .data = {{0x00, 0x00}, {0xFF, 0xFF, 0xFF, 0x00}}}
 #define setPacketPointer(pointer, p) {pointer.dummy = p.data.dummy; pointer.header = p.data.header; pointer.body = p.data.body;}
